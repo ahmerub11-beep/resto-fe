@@ -1,0 +1,14 @@
+main.auth {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: #16222A;
+    background: linear-gradient(to right, #16222A, #3A6073);
+
+    .card {
+        width: 100%;
+        max-width: 400px;
+    }
+}
