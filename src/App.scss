@@ -1,4 +1,5 @@
 @import "./bootstrap";
+@import "./scss/navbar";
 @import "./scss/auth";
 @import "./scss/screen-loader";
 @import "./scss/hero";
@@ -8,6 +9,9 @@
 @import "./scss/special-offers";
 @import "./scss/footer";
 @import "./scss/about-page";
+@import "./scss/dashboard";
+@import "./scss/orders";
+@import "./scss/users";
 
 #root {
     display: flex;

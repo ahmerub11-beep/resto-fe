@@ -1,9 +1,9 @@
-/* Categories Section Custom Styles */
+/* Categories Section Responsive Styles */
 
 .categories-section {
   position: relative;
-  padding: 2.5rem 0;
-  background: linear-gradient(180deg, #ffffff 0%, #f8f9fa 100%);
+  padding: clamp(3rem, 5vw, 5rem) 0;
+  background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
 }
 
 .category-card {
@@ -11,7 +11,7 @@
   border-radius: 20px;
   border: 1px solid rgba(0, 0, 0, 0.06);
   overflow: hidden;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
   transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
   cursor: pointer;
   height: 100%;
@@ -19,17 +19,17 @@
   flex-direction: column;
 
   &:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 22px 45px rgba(230, 57, 70, 0.15);
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(230, 57, 70, 0.12);
     border-color: rgba(230, 57, 70, 0.3);
 
     .category-img {
-      transform: scale(1.12) rotate(1deg);
+      transform: scale(1.1) rotate(1deg);
       filter: brightness(1.05);
     }
 
     .category-img-overlay {
-      opacity: 0.3;
+      opacity: 0.25;
     }
 
     .category-title {
@@ -37,7 +37,7 @@
     }
 
     .category-arrow-icon {
-      transform: translateX(6px);
+      transform: translateX(4px);
       background: #e63946;
       color: #ffffff;
     }
@@ -47,9 +47,9 @@
 .category-img-wrapper {
   position: relative;
   width: 100%;
-  height: 220px;
+  height: clamp(190px, 24vw, 225px);
   overflow: hidden;
-  background-color: #1a1a1a;
+  background-color: #1e293b;
 }
 
 .category-img {
@@ -66,22 +66,22 @@
   right: 0;
   bottom: 0;
   background: linear-gradient(180deg, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.6) 100%);
-  opacity: 0.6;
+  opacity: 0.5;
   transition: opacity 0.4s ease;
 }
 
-/* Category Badge on Image */
+/* Category Badges on Image */
 .category-item-count {
   position: absolute;
-  top: 14px;
-  right: 14px;
-  background: rgba(255, 255, 255, 0.9);
+  top: 12px;
+  right: 12px;
+  background: rgba(255, 255, 255, 0.92);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   color: #1d3557;
   font-size: 0.78rem;
   font-weight: 700;
-  padding: 5px 12px;
+  padding: 4px 10px;
   border-radius: 30px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   z-index: 2;
@@ -89,9 +89,9 @@
 
 .category-icon-tag {
   position: absolute;
-  bottom: 14px;
-  left: 14px;
-  background: rgba(230, 57, 70, 0.9);
+  bottom: 12px;
+  left: 12px;
+  background: rgba(230, 57, 70, 0.95);
   color: #ffffff;
   font-size: 1.1rem;
   width: 36px;
@@ -101,42 +101,53 @@
   align-items: center;
   justify-content: center;
   z-index: 2;
-  box-shadow: 0 4px 10px rgba(230, 57, 70, 0.4);
+  box-shadow: 0 4px 12px rgba(230, 57, 70, 0.4);
 }
 
 .category-body {
-  padding: 1.25rem 1.5rem;
+  padding: 1.15rem 1.25rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 12px;
   background: #ffffff;
   flex-grow: 1;
+
+  .category-info {
+    min-width: 0;
+  }
 }
 
 .category-title {
   font-weight: 700;
-  font-size: 1.15rem;
+  font-size: 1.1rem;
   color: #1d3557;
   margin-bottom: 2px;
   transition: color 0.3s ease;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .category-subtitle {
   font-size: 0.82rem;
-  color: #6c757d;
+  color: #64748b;
   margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .category-arrow-icon {
-  width: 38px;
-  height: 38px;
+  width: 36px;
+  height: 36px;
   border-radius: 50%;
-  background: #f1faee;
+  background: #f1f5f9;
   color: #1d3557;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   transition: all 0.35s ease;
   flex-shrink: 0;
 }

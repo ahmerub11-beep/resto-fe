@@ -3,24 +3,32 @@ import { ThunderboltFilled, SafetyCertificateFilled, TrophyFilled, CreditCardFil
 
 const services = [
     {
-        title: "Fast Delivery",
+        title: "30 Min Delivery",
         icon: <ThunderboltFilled />,
-        desc: "Get your order delivered fresh & piping hot within 30 minutes guaranteed."
+        iconColor: "#ffb703",
+        iconBg: "rgba(255, 183, 3, 0.14)",
+        desc: "Get your order delivered fresh & piping hot within 30 minutes guaranteed to your doorstep."
     },
     {
         title: "Fresh Ingredients",
         icon: <SafetyCertificateFilled />,
-        desc: "Hand-picked organic ingredients sourced daily from local trusted farms."
+        iconColor: "#10b981",
+        iconBg: "rgba(16, 185, 129, 0.14)",
+        desc: "Hand-picked 100% organic ingredients sourced daily from verified local trusted farms."
     },
     {
-        title: "Best Chefs",
+        title: "Master Chefs",
         icon: <TrophyFilled />,
-        desc: "Crafted with passion by world-class experienced culinary master chefs."
+        iconColor: "#e63946",
+        iconBg: "rgba(230, 57, 70, 0.14)",
+        desc: "Crafted with love and culinary finesse by award-winning experienced master chefs."
     },
     {
         title: "Secure Payment",
         icon: <CreditCardFilled />,
-        desc: "100% encrypted & secure payment options for a seamless checkout experience."
+        iconColor: "#3b82f6",
+        iconBg: "rgba(59, 130, 246, 0.14)",
+        desc: "100% encrypted & secure payment gateways for a seamless, hassle-free checkout."
     },
 ];
 
@@ -30,7 +38,7 @@ const WhyChooseUs = () => {
             <div className="container">
 
                 {/* Section Header */}
-                <div className="text-center mb-5">
+                <div className="text-center mb-4 mb-md-5">
                     <div className="why-choose-badge">
                         <CheckCircleOutlined />
                         <span>OUR PROMISE &amp; QUALITY</span>
@@ -40,17 +48,20 @@ const WhyChooseUs = () => {
                         Why Choose <span className="text-gradient">Our Store</span>
                     </h2>
 
-                    <p className="text-muted mx-auto" style={{ maxWidth: "550px" }}>
-                        We deliver exceptional food quality and fast service that makes every meal an unforgettable dining experience.
+                    <p className="text-muted mx-auto" style={{ maxWidth: "560px" }}>
+                        We deliver exceptional food quality and express service that makes every meal an unforgettable dining experience.
                     </p>
                 </div>
 
-                {/* Services Cards Grid */}
-                <div className="row g-4">
+                {/* Responsive Services Cards Grid: 1 col on xs, 2 col on sm/md, 4 col on lg */}
+                <div className="row g-3 g-md-4">
                     {services.map((item, index) => (
-                        <div className="col-12 col-sm-6 col-md-3" key={index}>
-                            <div className="feature-card">
-                                <div className="feature-icon-box">
+                        <div className="col-12 col-sm-6 col-lg-3" key={index}>
+                            <div className="feature-card h-100">
+                                <div
+                                    className="feature-icon-box"
+                                    style={{ color: item.iconColor, backgroundColor: item.iconBg }}
+                                >
                                     {item.icon}
                                 </div>
                                 <h4 className="feature-title">{item.title}</h4>

@@ -10,7 +10,7 @@ import {
     PhoneFilled,
     MailFilled,
     RightOutlined,
-    ShoppingFilled
+    FireFilled
 } from "@ant-design/icons";
 
 const Footer = () => {
@@ -36,9 +36,9 @@ const Footer = () => {
                     {/* Column 1: Brand & About */}
                     <div className="col-lg-4 col-md-6">
                         <Link to="/" className="text-decoration-none">
-                            <div className="footer-brand">
-                                <ShoppingFilled className="brand-icon" />
-                                <span>My Store</span>
+                            <div className="footer-brand d-inline-flex align-items-center gap-2">
+                                <span style={{ color: "#e63946" }}><FireFilled /></span>
+                                <span>Food<span style={{ color: "#e63946" }}>ie</span></span>
                             </div>
                         </Link>
 
@@ -158,7 +158,7 @@ const Footer = () => {
                 {/* Bottom Bar */}
                 <div className="footer-bottom-bar text-center text-md-between d-md-flex align-items-center justify-content-between">
                     <p className="mb-2 mb-md-0">
-                        &copy; {new Date().getFullYear()} <strong>My Store</strong>. All Rights Reserved. Built with ❤️ for Food Lovers.
+                        &copy; {new Date().getFullYear()} <strong>Foodie</strong>. All Rights Reserved. Built with ❤️ for Food Lovers.
                     </p>
                     <div className="small text-white-50">
                         <span className="me-3">Privacy Policy</span>

@@ -1,8 +1,8 @@
-/* Why Choose Us Section Styles */
+/* Why Choose Us Section Responsive Styles */
 
 .why-choose-section {
   position: relative;
-  padding: 4.5rem 0;
+  padding: clamp(3rem, 5vw, 5rem) 0;
   background: #ffffff;
 }
 
@@ -15,7 +15,7 @@
   color: #e63946;
   padding: 6px 16px;
   border-radius: 50px;
-  font-size: 0.85rem;
+  font-size: clamp(0.78rem, 2vw, 0.85rem);
   font-weight: 700;
   margin-bottom: 1rem;
 }
@@ -23,11 +23,10 @@
 .feature-card {
   background: #ffffff;
   border-radius: 20px;
-  border: 1px solid #e9ecef;
-  padding: 2rem 1.5rem;
+  border: 1px solid #e2e8f0;
+  padding: clamp(1.5rem, 3vw, 2.25rem) 1.25rem;
   text-align: center;
-  height: 100%;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
   transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
   display: flex;
   flex-direction: column;
@@ -35,14 +34,11 @@
 
   &:hover {
     transform: translateY(-8px);
-    box-shadow: 0 20px 40px rgba(230, 57, 70, 0.14);
+    box-shadow: 0 20px 40px rgba(230, 57, 70, 0.12);
     border-color: rgba(230, 57, 70, 0.3);
 
     .feature-icon-box {
-      transform: scale(1.12) rotate(6deg);
-      background: linear-gradient(135deg, #e63946 0%, #ff6b6b 100%);
-      color: #ffffff !important;
-      box-shadow: 0 10px 22px rgba(230, 57, 70, 0.4);
+      transform: scale(1.1) rotate(6deg);
     }
 
     .feature-title {
@@ -52,30 +48,35 @@
 }
 
 .feature-icon-box {
-  width: 65px;
-  height: 65px;
-  border-radius: 20px;
-  background: rgba(230, 57, 70, 0.08);
-  color: #e63946;
+  width: 60px;
+  height: 60px;
+  border-radius: 18px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.8rem;
-  margin-bottom: 1.5rem;
+  font-size: 1.6rem;
+  margin-bottom: 1.25rem;
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  flex-shrink: 0;
+
+  @media (max-width: 576px) {
+    width: 52px;
+    height: 52px;
+    font-size: 1.4rem;
+  }
 }
 
 .feature-title {
-  font-size: 1.2rem;
+  font-size: 1.15rem;
   font-weight: 700;
   color: #1d3557;
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.65rem;
   transition: color 0.3s ease;
 }
 
 .feature-desc {
-  font-size: 0.9rem;
-  color: #6c757d;
+  font-size: 0.88rem;
+  color: #64748b;
   line-height: 1.6;
   margin: 0;
 }

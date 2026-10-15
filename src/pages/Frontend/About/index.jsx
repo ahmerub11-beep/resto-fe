@@ -50,7 +50,7 @@ const About = () => {
 
                             {/* Main Story Image */}
                             <img
-                                src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=700"
+                                src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?w=800&auto=format&fit=crop&q=80"
                                 alt="Master Chef Preparing Gourmet Food"
                                 className="about-story-img img-fluid"
                             />
@@ -70,7 +70,7 @@ const About = () => {
                         </h2>
 
                         <p className="text-muted fs-6 mb-3">
-                            Founded with a simple vision, <strong>My Store</strong> was built to make restaurant-quality, chef-crafted food accessible to everyone at home—without ever compromising on taste, temperature, or nutritional value.
+                            Founded with a simple vision, <strong>Foodie</strong> was built to make restaurant-quality, chef-crafted food accessible to everyone at home—without ever compromising on taste, temperature, or nutritional value.
                         </p>
 
                         <p className="text-muted fs-6 mb-4">

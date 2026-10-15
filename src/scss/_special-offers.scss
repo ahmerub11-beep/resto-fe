@@ -1,7 +1,8 @@
-/* Special Offers Section Custom Styles */
+/* Special Offers Section Responsive Styles */
 
 .special-offers-section {
-  padding: 4rem 0;
+  padding: clamp(3rem, 5vw, 5rem) 0;
+  width: 100%;
 }
 
 .offer-card {
@@ -9,13 +10,9 @@
   background: linear-gradient(135deg, #1d3557 0%, #0f172a 100%);
   border-radius: 28px;
   overflow: hidden;
-  padding: 3.5rem 2.5rem;
+  padding: clamp(2rem, 5vw, 4rem) clamp(1.25rem, 4vw, 3.5rem);
   box-shadow: 0 20px 45px rgba(15, 23, 42, 0.25);
   color: #ffffff;
-
-  @media (min-width: 992px) {
-    padding: 4rem 3.5rem;
-  }
 }
 
 /* Ambient Background Glowing Blobs */
@@ -23,8 +20,8 @@
   position: absolute;
   top: -30%;
   right: 10%;
-  width: 350px;
-  height: 350px;
+  width: min(350px, 80vw);
+  height: min(350px, 80vw);
   background: radial-gradient(circle, rgba(230, 57, 70, 0.25) 0%, rgba(255, 255, 255, 0) 70%);
   border-radius: 50%;
   pointer-events: none;
@@ -35,8 +32,8 @@
   position: absolute;
   bottom: -20%;
   left: -5%;
-  width: 300px;
-  height: 300px;
+  width: min(300px, 80vw);
+  height: min(300px, 80vw);
   background: radial-gradient(circle, rgba(255, 183, 3, 0.2) 0%, rgba(255, 255, 255, 0) 70%);
   border-radius: 50%;
   pointer-events: none;
@@ -53,21 +50,17 @@
   color: #ff6b6b;
   padding: 6px 16px;
   border-radius: 50px;
-  font-size: 0.85rem;
+  font-size: clamp(0.75rem, 1.8vw, 0.85rem);
   font-weight: 700;
   margin-bottom: 1.25rem;
   backdrop-filter: blur(8px);
 }
 
 .offer-title {
-  font-size: 2.2rem;
+  font-size: clamp(1.75rem, 4vw + 0.3rem, 3rem);
   font-weight: 800;
-  line-height: 1.25;
+  line-height: 1.2;
   color: #ffffff;
-
-  @media (min-width: 992px) {
-    font-size: 3rem;
-  }
 }
 
 .offer-highlight {
@@ -79,8 +72,8 @@
 }
 
 .offer-desc {
-  color: #e2e8f0;
-  font-size: 1.05rem;
+  color: #cbd5e1;
+  font-size: clamp(0.92rem, 1.5vw + 0.2rem, 1.05rem);
   line-height: 1.6;
   max-width: 520px;
 }
@@ -89,18 +82,18 @@
 .coupon-container {
   display: inline-flex;
   align-items: center;
-  gap: 12px;
-  background: rgba(255, 255, 255, 0.08);
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border: 2px dashed rgba(255, 77, 79, 0.6);
+  border: 2px dashed rgba(255, 77, 79, 0.7);
   padding: 8px 18px;
   border-radius: 14px;
   cursor: pointer;
   transition: all 0.3s ease;
 
   &:hover {
-    background: rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.18);
     border-color: #ff4d4f;
     transform: translateY(-2px);
     box-shadow: 0 8px 20px rgba(255, 77, 79, 0.25);
@@ -113,7 +106,7 @@
 
 .coupon-code {
   font-family: monospace;
-  font-size: 1.4rem;
+  font-size: clamp(1.15rem, 3vw, 1.4rem);
   font-weight: 800;
   color: #ff4d4f;
   letter-spacing: 2px;
@@ -125,28 +118,33 @@
   background: linear-gradient(135deg, #e63946 0%, #d62828 100%) !important;
   color: #ffffff !important;
   border: none !important;
-  padding: 12px 32px !important;
+  padding: 13px 30px !important;
   font-weight: 700 !important;
   font-size: 1rem !important;
-  border-radius: 12px !important;
+  border-radius: 14px !important;
   box-shadow: 0 8px 22px rgba(230, 57, 70, 0.4) !important;
   transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1) !important;
   display: inline-flex !important;
   align-items: center !important;
   justify-content: center !important;
   gap: 8px !important;
+  cursor: pointer !important;
 
   .btn-icon {
     transition: transform 0.3s ease !important;
   }
 
   &:hover {
-    transform: translateY(-4px) scale(1.02) !important;
+    transform: translateY(-3px) !important;
     box-shadow: 0 14px 28px rgba(230, 57, 70, 0.55) !important;
 
     .btn-icon {
-      transform: translateX(5px) !important;
+      transform: translateX(4px) !important;
     }
+  }
+
+  &:active {
+    transform: translateY(-1px) !important;
   }
 }
 
@@ -155,20 +153,20 @@
   position: relative;
   display: inline-block;
   width: 100%;
-  max-width: 420px;
+  max-width: 440px;
 }
 
 .offer-main-img {
   width: 100%;
-  height: 320px;
+  height: clamp(230px, 35vw, 330px);
   object-fit: cover;
-  border-radius: 20px;
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+  border-radius: 22px;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.35);
   animation: offer-img-float 4.8s ease-in-out infinite;
   transition: transform 0.4s ease;
 
   &:hover {
-    transform: scale(1.03);
+    transform: scale(1.02);
   }
 }
 
@@ -177,19 +175,19 @@
     transform: translateY(0px);
   }
   50% {
-    transform: translateY(-12px);
+    transform: translateY(-10px);
   }
 }
 
 .offer-floating-tag {
   position: absolute;
-  top: -12px;
-  right: -12px;
+  top: 12px;
+  right: 12px;
   background: #ffb703;
   color: #1d3557;
   font-weight: 800;
-  font-size: 0.85rem;
-  padding: 8px 16px;
+  font-size: clamp(0.72rem, 1.8vw, 0.82rem);
+  padding: 6px 14px;
   border-radius: 30px;
   box-shadow: 0 8px 20px rgba(255, 183, 3, 0.4);
   display: flex;
@@ -204,6 +202,6 @@
     transform: translateY(0);
   }
   50% {
-    transform: translateY(-6px);
+    transform: translateY(-5px);
   }
 }
